@@ -23,7 +23,7 @@ class CharactersView: UIView {
         return tableView
     }()
     
-    lazy var activityIndicator: UIActivityIndicatorView = {
+    private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.hidesWhenStopped = true
         indicator.color = .black

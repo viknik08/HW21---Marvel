@@ -58,20 +58,13 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let cell = presenter.settings[indexPath.section][indexPath.row]
-//
-//        switch cell.type  {
-//        case .switcher:
-//            return
-//        default:
-//            let detail = presenter.settings[indexPath.section][indexPath.row]
-//            let viewController = ModuleBuilder.createDetail(detail: detail)
-////             viewController.model = presenter.settings[indexPath.section][indexPath.row]
-//             navigationController?.pushViewController(viewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+        let detail = presenter?.characters[indexPath.row]
+        let viewController = ModuleBuilder.creatDetailModule(detail: detail)
+        //             viewController.model = presenter.settings[indexPath.section][indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
         
         }
-
 }
 
 

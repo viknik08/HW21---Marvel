@@ -23,6 +23,10 @@
 		BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */; };
 		BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */; };
 		BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */; };
+		BE15A0732917D731004AE5B5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0722917D731004AE5B5 /* DetailView.swift */; };
+		BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0742917D742004AE5B5 /* DetailViewController.swift */; };
+		BE15A0772917D757004AE5B5 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0762917D757004AE5B5 /* DetailPresenter.swift */; };
+		BE15A07A2917DB78004AE5B5 /* imageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfiguration.swift; sourceTree = "<group>"; };
 		BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForImage.swift; sourceTree = "<group>"; };
+		BE15A0722917D731004AE5B5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BE15A0742917D742004AE5B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE15A0762917D757004AE5B5 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewWithGradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 		BE15A0482913C458004AE5B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE15A0782917DB59004AE5B5 /* Style */,
 				BE15A06329164A0B004AE5B5 /* String + MD5.swift */,
 			);
 			path = Extensions;
@@ -211,6 +220,8 @@
 		BE15A05D2914EB56004AE5B5 /* DetailViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				BE15A0702917D711004AE5B5 /* View */,
+				BE15A0712917D718004AE5B5 /* Presenter */,
 			);
 			path = DetailViewModule;
 			sourceTree = "<group>";
@@ -230,6 +241,31 @@
 				BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */,
 			);
 			path = "API Keys";
+			sourceTree = "<group>";
+		};
+		BE15A0702917D711004AE5B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0742917D742004AE5B5 /* DetailViewController.swift */,
+				BE15A0722917D731004AE5B5 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE15A0712917D718004AE5B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0762917D757004AE5B5 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BE15A0782917DB59004AE5B5 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,13 +350,17 @@
 				BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */,
 				BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */,
 				BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */,
+				BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */,
 				BE15A06429164A0B004AE5B5 /* String + MD5.swift in Sources */,
 				BE15A0552914E9B0004AE5B5 /* CharactersTableViewCell.swift in Sources */,
 				BE15A0532914E988004AE5B5 /* CharactersModel.swift in Sources */,
 				BE15A06729179BF6004AE5B5 /* EnumForState.swift in Sources */,
 				BE15A0582914E9C9004AE5B5 /* CharactersView.swift in Sources */,
 				BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */,
+				BE15A07A2917DB78004AE5B5 /* imageViewWithGradient.swift in Sources */,
+				BE15A0732917D731004AE5B5 /* DetailView.swift in Sources */,
 				BE15A0332913C260004AE5B5 /* SceneDelegate.swift in Sources */,
+				BE15A0772917D757004AE5B5 /* DetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

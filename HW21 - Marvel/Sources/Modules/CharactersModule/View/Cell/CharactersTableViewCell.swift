@@ -37,7 +37,7 @@ class CharactersTableViewCell: UITableViewCell {
         image.layer.cornerRadius = 30
         return image
     }()
-    private let lable: UILabel = {
+    lazy var lable: UILabel = {
         let label = UILabel()
         label.textColor = .black
         return label
