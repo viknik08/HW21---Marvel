@@ -14,7 +14,7 @@ struct CharacterWraper: Decodable {
     let attributionText: String
     let attributionHTML: String
     let etag: String
-    let data: [CharacterContainer]
+    let data: CharacterContainer
 }
 
 struct CharacterContainer: Decodable {
@@ -31,14 +31,8 @@ struct Character: Decodable {
     let description: String
     let modified: String
     let resourceURI: String
-    let urls: [Urls]
     let thumbnail: Image
     let comics: Comics
-}
-
-struct Urls: Decodable {
-    let type: String
-    let url: String
 }
 
 struct Image: Decodable {

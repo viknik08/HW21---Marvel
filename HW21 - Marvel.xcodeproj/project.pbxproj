@@ -17,6 +17,12 @@
 		BE15A0582914E9C9004AE5B5 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0572914E9C9004AE5B5 /* CharactersView.swift */; };
 		BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A05B2914EB41004AE5B5 /* ModuleBuilder.swift */; };
 		BE15A0602914F57C004AE5B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE15A05F2914F57C004AE5B5 /* SnapKit */; };
+		BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A061291644CE004AE5B5 /* NetworkService.swift */; };
+		BE15A06429164A0B004AE5B5 /* String + MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06329164A0B004AE5B5 /* String + MD5.swift */; };
+		BE15A06729179BF6004AE5B5 /* EnumForState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06629179BF5004AE5B5 /* EnumForState.swift */; };
+		BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */; };
+		BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */; };
+		BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		BE15A0542914E9B0004AE5B5 /* CharactersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewCell.swift; sourceTree = "<group>"; };
 		BE15A0572914E9C9004AE5B5 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		BE15A05B2914EB41004AE5B5 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		BE15A061291644CE004AE5B5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BE15A06329164A0B004AE5B5 /* String + MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + MD5.swift"; sourceTree = "<group>"; };
+		BE15A06629179BF5004AE5B5 /* EnumForState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForState.swift; sourceTree = "<group>"; };
+		BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfiguration.swift; sourceTree = "<group>"; };
+		BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 		BE15A0482913C458004AE5B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE15A06329164A0B004AE5B5 /* String + MD5.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +132,8 @@
 		BE15A0492913C463004AE5B5 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				BE15A061291644CE004AE5B5 /* NetworkService.swift */,
+				BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -160,6 +175,8 @@
 		BE15A0512914E954004AE5B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE15A0682917D09E004AE5B5 /* API Keys */,
+				BE15A06529179BD7004AE5B5 /* Enum */,
 				BE15A0502914E918004AE5B5 /* CharactersModel */,
 			);
 			path = Models;
@@ -196,6 +213,23 @@
 			children = (
 			);
 			path = DetailViewModule;
+			sourceTree = "<group>";
+		};
+		BE15A06529179BD7004AE5B5 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A06629179BF5004AE5B5 /* EnumForState.swift */,
+				BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		BE15A0682917D09E004AE5B5 /* API Keys */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */,
+			);
+			path = "API Keys";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +309,17 @@
 			files = (
 				BE15A04F2914E8F6004AE5B5 /* CharactersPresenter.swift in Sources */,
 				BE15A0352913C260004AE5B5 /* CharactersViewController.swift in Sources */,
+				BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */,
 				BE15A0312913C260004AE5B5 /* AppDelegate.swift in Sources */,
 				BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */,
+				BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */,
+				BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */,
+				BE15A06429164A0B004AE5B5 /* String + MD5.swift in Sources */,
 				BE15A0552914E9B0004AE5B5 /* CharactersTableViewCell.swift in Sources */,
 				BE15A0532914E988004AE5B5 /* CharactersModel.swift in Sources */,
+				BE15A06729179BF6004AE5B5 /* EnumForState.swift in Sources */,
 				BE15A0582914E9C9004AE5B5 /* CharactersView.swift in Sources */,
+				BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */,
 				BE15A0332913C260004AE5B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
