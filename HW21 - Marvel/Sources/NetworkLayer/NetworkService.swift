@@ -10,15 +10,15 @@ import Foundation
 typealias CharactersResult = Result<CharacterWraper, Error>
 
 protocol NetworkServiceProtocol {
-    func getCharacters(_ completion: @escaping (CharactersResult) -> Void)
+    func getCharacters(searchResult: String?, _ completion: @escaping (CharactersResult) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
     
     let urlConfig = URLConfiguration()
 
-    func getCharacters(_ completion: @escaping (CharactersResult) -> Void) {
-        guard let url = URL(string: urlConfig.getURL(publicKey: ApiKeys.publicKey, privateKey: ApiKeys.privateKey)) else {return}
+    func getCharacters(searchResult: String?, _ completion: @escaping (CharactersResult) -> Void) {
+        guard let url = URL(string: urlConfig.getURL(publicKey: ApiKeys.publicKey, privateKey: ApiKeys.privateKey, searchResult: searchResult)) else {return}
         URLSession.shared.dataTask(with: url) { data, respose, error in
             if let error = error {
                 completion(.failure(error))

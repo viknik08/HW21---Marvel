@@ -8,7 +8,7 @@
 import Foundation
 
 class URLConfiguration {
-    public func getURL(publicKey: String, privateKey: String) -> String {
+    public func getURL(publicKey: String, privateKey: String, searchResult: String?) -> String {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -22,6 +22,9 @@ class URLConfiguration {
                                     URLQueryItem(name: "limit", value: "50"),
                                     URLQueryItem(name: "apikey", value: publicKey),
                                     URLQueryItem(name: "hash", value: (timestamp + privateKey + publicKey).MD5)]
+        if let searchText = searchResult {
+            urlComponents.queryItems?.append(URLQueryItem(name: "nameStartsWith", value: searchText))
+        }
         return urlComponents.url!.absoluteString
     }
 }

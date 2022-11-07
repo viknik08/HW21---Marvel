@@ -16,7 +16,7 @@ protocol CharactersViewProtocol: AnyObject {
 
 protocol CharactersPresenterProtocol: AnyObject {
     init(view: CharactersViewProtocol, networkService: NetworkServiceProtocol)
-    func getCharacters()
+    func getCharacters(searchText: String?)
     var characters: [Character] { get set }
 }
 
@@ -29,12 +29,12 @@ class CharactersPresenter: CharactersPresenterProtocol {
     required init(view: CharactersViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
-        getCharacters()
+        getCharacters(searchText: nil)
     }
     
-    func getCharacters() {
+    func getCharacters(searchText: String?) {
         view?.updateViewData(.loading)
-            networkService.getCharacters { [weak self] result in
+        networkService.getCharacters(searchResult: searchText) { [weak self] result in
                 guard let self = self else {return}
                 DispatchQueue.main.async {
                     switch result {

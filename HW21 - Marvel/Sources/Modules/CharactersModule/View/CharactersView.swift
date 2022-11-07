@@ -30,6 +30,13 @@ class CharactersView: UIView {
         return indicator
     }()
     
+    lazy var searchController: UISearchController = {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchBar.placeholder = "Search"
+        search.obscuresBackgroundDuringPresentation = false
+        return search
+    }()
+    
 //    MARK: - Layout
     
     override func layoutSubviews() {

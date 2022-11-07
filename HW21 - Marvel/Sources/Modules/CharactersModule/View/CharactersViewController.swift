@@ -13,14 +13,14 @@ class CharactersViewController: UIViewController {
     
     var presenter: CharactersPresenterProtocol?
     
+    
 //    MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Heroes"
-        navigationController?.navigationBar.prefersLargeTitles = true
         setupHierarhy()
+        setupNavigationBar()
         setDelegat()
     }
     
@@ -34,6 +34,13 @@ class CharactersViewController: UIViewController {
     private func setDelegat() {
         charactersView.tableView.delegate = self
         charactersView.tableView.dataSource = self
+        charactersView.searchController.searchBar.delegate = self
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Heroes"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = charactersView.searchController
     }
 }
 
@@ -61,10 +68,26 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let detail = presenter?.characters[indexPath.row]
         let viewController = ModuleBuilder.creatDetailModule(detail: detail)
-        //             viewController.model = presenter.settings[indexPath.section][indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension CharactersViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        var timer: Timer?
+        let text = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        if text != "" {
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
+                guard let self = self else { return }
+                self.presenter?.getCharacters(searchText: text)
+            })
+        } else {
+            presenter?.getCharacters(searchText: nil)
         }
+    }
 }
 
 
@@ -79,7 +102,6 @@ extension CharactersViewController: CharactersViewProtocol {
     
     func failure(error: Error) {
         print(error.localizedDescription)
-
     }
 }
 
