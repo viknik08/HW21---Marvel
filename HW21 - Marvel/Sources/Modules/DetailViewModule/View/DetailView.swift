@@ -14,6 +14,7 @@ class DetailView: UIView {
             if let detail = detail {
                 titleLabel.text = detail.name
                 descriptionLabel.text = detail.description.isEmpty ? "No info" : detail.description
+                comicsList.text = detail.comics.items.map {$0.name}.joined(separator: ", \n")
                 guard let imageLink = URL(string: String.getUrlString(image: detail.thumbnail, variant: ImageVarians.standardExtraLarge)) else { return }
                 backgroundImage.load(url: imageLink)
             }
@@ -21,13 +22,7 @@ class DetailView: UIView {
     }
     
 //    MARK: - Outlets
-    
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.backgroundColor = .clear
-        return tableView
-    }()
-    
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -39,7 +34,23 @@ class DetailView: UIView {
         let label = UILabel()
         label.textColor = .black
         label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 16 , weight: .bold)
+        label.font = .systemFont(ofSize: 16 , weight: .medium)
+        return label
+    }()
+    
+    private let comicsLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "Comics List:"
+        label.font = .systemFont(ofSize: 18, weight: .bold)
+        return label
+    }()
+    
+    private let comicsList: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 16 , weight: .medium)
         return label
     }()
     
@@ -48,13 +59,6 @@ class DetailView: UIView {
         image.contentMode = .scaleAspectFill
         return image
     }()
-
-    private let activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.hidesWhenStopped = true
-        indicator.color = .black
-        return indicator
-    }()
     
 //    MARK: - Layout
     
@@ -62,7 +66,6 @@ class DetailView: UIView {
         super.layoutSubviews()
         setupHierarhy()
         setupLayout()
-        registerCell()
     }
     
 //    MARK: - Setups
@@ -70,8 +73,8 @@ class DetailView: UIView {
         addSubview(backgroundImage)
         addSubview(titleLabel)
         addSubview(descriptionLabel)
-        addSubview(tableView)
-        addSubview(activityIndicator)
+        addSubview(comicsLabel)
+        addSubview(comicsList)
     }
     
     private func setupLayout() {
@@ -87,21 +90,16 @@ class DetailView: UIView {
             make.top.equalTo(titleLabel.snp.bottom).offset(20)
             make.left.equalTo(backgroundImage).offset(20)
             make.right.equalTo(backgroundImage).offset(-20)
+        }
+        comicsLabel.snp.makeConstraints { make in
+            make.left.equalTo(backgroundImage).offset(20)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(40)
+        }
+        comicsList.snp.makeConstraints { make in
+            make.left.equalTo(backgroundImage).offset(20)
+            make.right.equalTo(backgroundImage).offset(-20)
+            make.top.equalTo(comicsLabel.snp.bottom).offset(10)
 
         }
-        tableView.snp.makeConstraints { make in
-            make.right.left.equalTo(backgroundImage)
-            make.bottom.equalTo(backgroundImage.snp.bottom).offset(-20)
-            make.height.equalTo(self.bounds.height / 2)
-
-        }
-        activityIndicator.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(50)
-            make.left.right.equalTo(backgroundImage)
-        }
-    }
-    
-    private func registerCell() {
-        tableView.register(CharactersTableViewCell.self, forCellReuseIdentifier: CharactersTableViewCell.identifier)
     }
 }

@@ -90,7 +90,6 @@ extension CharactersViewController: UISearchBarDelegate {
     }
 }
 
-
 extension CharactersViewController: CharactersViewProtocol {
     func updateViewData(_ data: ViewData) {
         charactersView.viewData = data

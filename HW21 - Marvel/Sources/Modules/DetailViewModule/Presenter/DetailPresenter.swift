@@ -30,6 +30,5 @@ class DetailPresenter: DetailPresenterProtocol {
     
     func requestDetail() {
         self.view?.setDetail(detail: detail)
-    }
-  
+    }  
 }

@@ -28,5 +28,3 @@ class URLConfiguration {
         return urlComponents.url!.absoluteString
     }
 }
-
-//URLQueryItem(name: "nameStartsWith", value: "Spider-Man"),

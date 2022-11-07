@@ -48,7 +48,6 @@ struct Comics: Decodable {
 }
 
 struct ComicList: Decodable {
-    let resourceURI: String
     let name: String
 }
 
