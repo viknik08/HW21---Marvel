@@ -12,6 +12,7 @@ protocol CharactersViewProtocol: AnyObject {
     func success()
     func failure(error: Error)
     func updateViewData(_ data: ViewData)
+    func checkRequestResult(isEmpty: Bool)
 }
 
 protocol CharactersPresenterProtocol: AnyObject {
@@ -39,14 +40,10 @@ class CharactersPresenter: CharactersPresenterProtocol {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let loadedData):
-                        if loadedData.data.results.count > 0 {
-                            self.characters = loadedData.data.results
-                            self.view?.updateViewData(.success)
-                            self.view?.success()
-                        } else {
-                            self.view?.failure(error: Errror.comeErr)
-                            self.view?.updateViewData(.failure)
-                        }
+                        self.characters = loadedData.data.results
+                        self.view?.checkRequestResult(isEmpty: loadedData.data.results.isEmpty)
+                        self.view?.updateViewData(.success)
+                        self.view?.success()
                     case .failure(let error):
                         self.view?.failure(error: error)
                         self.view?.updateViewData(.failure)

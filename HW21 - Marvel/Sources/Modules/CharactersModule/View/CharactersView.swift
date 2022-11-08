@@ -23,6 +23,15 @@ class CharactersView: UIView {
         return tableView
     }()
     
+    lazy var searchFound: UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFit
+        image.image = UIImage(named: "search_stub")
+        image.clipsToBounds = true
+        image.isHidden = true
+        return image
+    }()
+    
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.hidesWhenStopped = true
@@ -51,6 +60,7 @@ class CharactersView: UIView {
             startStopActivityIndicator(viewData: nil)
         case .loading:
             startStopActivityIndicator(viewData: .loading)
+            searchFound.isHidden = false
             update(isHidden: true)
         case .success:
             startStopActivityIndicator(viewData: .success)
@@ -68,6 +78,7 @@ class CharactersView: UIView {
     private func setupHierarhy() {
         addSubview(tableView)
         addSubview(activityIndicator)
+        addSubview(searchFound)
     }
     
     private func setupLayout() {
@@ -75,6 +86,9 @@ class CharactersView: UIView {
             make.top.left.right.bottom.equalTo(self)
         }
         activityIndicator.snp.makeConstraints { make in
+            make.top.left.right.bottom.equalTo(self)
+        }
+        searchFound.snp.makeConstraints { make in
             make.top.left.right.bottom.equalTo(self)
         }
     }

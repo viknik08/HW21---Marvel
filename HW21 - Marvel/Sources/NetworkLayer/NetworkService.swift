@@ -18,17 +18,19 @@ class NetworkService: NetworkServiceProtocol {
     let urlConfig = URLConfiguration()
 
     func getCharacters(searchResult: String?, _ completion: @escaping (CharactersResult) -> Void) {
-        guard let url = URL(string: urlConfig.getURL(publicKey: ApiKeys.publicKey, privateKey: ApiKeys.privateKey, searchResult: searchResult)) else {return}
+        guard let url = URL(string: urlConfig.getURL(publicKey: ApiKeys.publicKey, privateKey: ApiKeys.privateKey, searchResult: searchResult)) else { return }
         URLSession.shared.dataTask(with: url) { data, respose, error in
             if let error = error {
                 completion(.failure(error))
                 print(error.localizedDescription)
                 return
             }
-            guard let dataRes = data else {return}
+            guard let dataRes = data else { return }
+            
             do {
                 let characters = try JSONDecoder().decode(CharacterWraper.self, from: dataRes)
                 completion(.success(characters))
+                
             } catch let jesonError {
                 completion(.failure(jesonError))
             }

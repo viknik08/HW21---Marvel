@@ -101,14 +101,21 @@ extension CharactersViewController: CharactersViewProtocol {
     }
     
     func failure(error: Error) {
-        alertOk(title: "Error", message: "This heroes not found. Try did it again") { [weak self] _ in
-            self?.charactersView.searchController.searchBar.text = ""
-            self?.presenter?.getCharacters(searchText: nil)
+        alertErr(title: "Error", message: error.localizedDescription)
+    }
+    
+    func checkRequestResult(isEmpty: Bool) {
+        if isEmpty {
+            charactersView.tableView.isHidden = true
+            charactersView.searchFound.isHidden = false
+            alertOk(title: "Error", message: "This heroes not found. Try it again") { [weak self] _ in
+                self?.charactersView.searchController.searchBar.text = ""
+                self?.presenter?.getCharacters(searchText: nil)
+            }
+        }
+        else {
+            charactersView.tableView.isHidden = false
+            charactersView.searchFound.isHidden = true
         }
     }
 }
-
-enum Errror: Error {
-    case comeErr
-}
-

@@ -10,11 +10,16 @@ import UIKit
 extension UIViewController {
     
     func alertOk(title: String, message: String, complition: @escaping (UIAlertAction) -> Void) {
-        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default, handler: complition)
         alert.addAction(ok)
         present(alert, animated: true,  completion: nil)
     }
-
+    
+    func alertErr(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancel)
+        present(alert, animated: true,  completion: nil)
+    }
 }
