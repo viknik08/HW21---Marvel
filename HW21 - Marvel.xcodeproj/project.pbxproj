@@ -9,21 +9,50 @@
 /* Begin PBXBuildFile section */
 		BE15A0312913C260004AE5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0302913C260004AE5B5 /* AppDelegate.swift */; };
 		BE15A0332913C260004AE5B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0322913C260004AE5B5 /* SceneDelegate.swift */; };
-		BE15A0352913C260004AE5B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0342913C260004AE5B5 /* ViewController.swift */; };
-		BE15A0382913C260004AE5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE15A0362913C260004AE5B5 /* Main.storyboard */; };
+		BE15A0352913C260004AE5B5 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0342913C260004AE5B5 /* CharactersViewController.swift */; };
 		BE15A03A2913C26C004AE5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE15A0392913C26C004AE5B5 /* Assets.xcassets */; };
-		BE15A03D2913C26C004AE5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE15A03B2913C26C004AE5B5 /* LaunchScreen.storyboard */; };
+		BE15A04F2914E8F6004AE5B5 /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A04E2914E8F6004AE5B5 /* CharactersPresenter.swift */; };
+		BE15A0532914E988004AE5B5 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0522914E988004AE5B5 /* CharactersModel.swift */; };
+		BE15A0552914E9B0004AE5B5 /* CharactersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0542914E9B0004AE5B5 /* CharactersTableViewCell.swift */; };
+		BE15A0582914E9C9004AE5B5 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0572914E9C9004AE5B5 /* CharactersView.swift */; };
+		BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A05B2914EB41004AE5B5 /* ModuleBuilder.swift */; };
+		BE15A0602914F57C004AE5B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE15A05F2914F57C004AE5B5 /* SnapKit */; };
+		BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A061291644CE004AE5B5 /* NetworkService.swift */; };
+		BE15A06429164A0B004AE5B5 /* String + MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06329164A0B004AE5B5 /* String + MD5.swift */; };
+		BE15A06729179BF6004AE5B5 /* EnumForState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06629179BF5004AE5B5 /* EnumForState.swift */; };
+		BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */; };
+		BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */; };
+		BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */; };
+		BE15A0732917D731004AE5B5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0722917D731004AE5B5 /* DetailView.swift */; };
+		BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0742917D742004AE5B5 /* DetailViewController.swift */; };
+		BE15A0772917D757004AE5B5 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0762917D757004AE5B5 /* DetailPresenter.swift */; };
+		BE15A07A2917DB78004AE5B5 /* imageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */; };
+		BEADBE6E291A6F4E004E6BFC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADBE6D291A6F4E004E6BFC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE15A02D2913C260004AE5B5 /* HW21 - Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW21 - Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE15A0302913C260004AE5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE15A0322913C260004AE5B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE15A0342913C260004AE5B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE15A0372913C260004AE5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE15A0342913C260004AE5B5 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		BE15A0392913C26C004AE5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE15A03C2913C26C004AE5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE15A03E2913C26C004AE5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE15A04E2914E8F6004AE5B5 /* CharactersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPresenter.swift; sourceTree = "<group>"; };
+		BE15A0522914E988004AE5B5 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		BE15A0542914E9B0004AE5B5 /* CharactersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewCell.swift; sourceTree = "<group>"; };
+		BE15A0572914E9C9004AE5B5 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		BE15A05B2914EB41004AE5B5 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		BE15A061291644CE004AE5B5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BE15A06329164A0B004AE5B5 /* String + MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + MD5.swift"; sourceTree = "<group>"; };
+		BE15A06629179BF5004AE5B5 /* EnumForState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForState.swift; sourceTree = "<group>"; };
+		BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfiguration.swift; sourceTree = "<group>"; };
+		BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForImage.swift; sourceTree = "<group>"; };
+		BE15A0722917D731004AE5B5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BE15A0742917D742004AE5B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE15A0762917D757004AE5B5 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewWithGradient.swift; sourceTree = "<group>"; };
+		BEADBE6D291A6F4E004E6BFC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE15A0602914F57C004AE5B5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +86,189 @@
 		BE15A02F2913C260004AE5B5 /* HW21 - Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				BE15A0302913C260004AE5B5 /* AppDelegate.swift */,
-				BE15A0322913C260004AE5B5 /* SceneDelegate.swift */,
-				BE15A0342913C260004AE5B5 /* ViewController.swift */,
-				BE15A0362913C260004AE5B5 /* Main.storyboard */,
-				BE15A0392913C26C004AE5B5 /* Assets.xcassets */,
-				BE15A03B2913C26C004AE5B5 /* LaunchScreen.storyboard */,
-				BE15A03E2913C26C004AE5B5 /* Info.plist */,
+				BE15A0452913C414004AE5B5 /* Sources */,
+				BE15A0462913C427004AE5B5 /* Resources */,
 			);
 			path = "HW21 - Marvel";
+			sourceTree = "<group>";
+		};
+		BE15A0442913C407004AE5B5 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0302913C260004AE5B5 /* AppDelegate.swift */,
+				BE15A0322913C260004AE5B5 /* SceneDelegate.swift */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		BE15A0452913C414004AE5B5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0442913C407004AE5B5 /* APP */,
+				BE15A0492913C463004AE5B5 /* NetworkLayer */,
+				BE15A04A2913C682004AE5B5 /* BusinessLayer */,
+				BE15A0472913C448004AE5B5 /* Modules */,
+				BE15A0482913C458004AE5B5 /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BE15A0462913C427004AE5B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0392913C26C004AE5B5 /* Assets.xcassets */,
+				BE15A03E2913C26C004AE5B5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE15A0472913C448004AE5B5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A05D2914EB56004AE5B5 /* DetailViewModule */,
+				BE15A04B2914E84F004AE5B5 /* CharactersModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BE15A0482913C458004AE5B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0782917DB59004AE5B5 /* Style */,
+				BE15A06329164A0B004AE5B5 /* String + MD5.swift */,
+				BEADBE6D291A6F4E004E6BFC /* Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE15A0492913C463004AE5B5 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A061291644CE004AE5B5 /* NetworkService.swift */,
+				BE15A06C2917D175004AE5B5 /* URLConfiguration.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		BE15A04A2913C682004AE5B5 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A05A2914EB29004AE5B5 /* ModuleBuilder */,
+				BE15A0512914E954004AE5B5 /* Models */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		BE15A04B2914E84F004AE5B5 /* CharactersModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0562914E9B9004AE5B5 /* View */,
+				BE15A0592914E9CF004AE5B5 /* Presenter */,
+			);
+			path = CharactersModule;
+			sourceTree = "<group>";
+		};
+		BE15A04D2914E88E004AE5B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0542914E9B0004AE5B5 /* CharactersTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BE15A0502914E918004AE5B5 /* CharactersModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0522914E988004AE5B5 /* CharactersModel.swift */,
+			);
+			path = CharactersModel;
+			sourceTree = "<group>";
+		};
+		BE15A0512914E954004AE5B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0682917D09E004AE5B5 /* API Keys */,
+				BE15A06529179BD7004AE5B5 /* Enum */,
+				BE15A0502914E918004AE5B5 /* CharactersModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE15A0562914E9B9004AE5B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A04D2914E88E004AE5B5 /* Cell */,
+				BE15A0342913C260004AE5B5 /* CharactersViewController.swift */,
+				BE15A0572914E9C9004AE5B5 /* CharactersView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE15A0592914E9CF004AE5B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A04E2914E8F6004AE5B5 /* CharactersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BE15A05A2914EB29004AE5B5 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A05B2914EB41004AE5B5 /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		BE15A05D2914EB56004AE5B5 /* DetailViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0702917D711004AE5B5 /* View */,
+				BE15A0712917D718004AE5B5 /* Presenter */,
+			);
+			path = DetailViewModule;
+			sourceTree = "<group>";
+		};
+		BE15A06529179BD7004AE5B5 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A06629179BF5004AE5B5 /* EnumForState.swift */,
+				BE15A06E2917D41E004AE5B5 /* EnumForImage.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		BE15A0682917D09E004AE5B5 /* API Keys */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A06A2917D0CF004AE5B5 /* ApiKeys.swift */,
+			);
+			path = "API Keys";
+			sourceTree = "<group>";
+		};
+		BE15A0702917D711004AE5B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0742917D742004AE5B5 /* DetailViewController.swift */,
+				BE15A0722917D731004AE5B5 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE15A0712917D718004AE5B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0762917D757004AE5B5 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BE15A0782917DB59004AE5B5 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +287,9 @@
 			dependencies = (
 			);
 			name = "HW21 - Marvel";
+			packageProductDependencies = (
+				BE15A05F2914F57C004AE5B5 /* SnapKit */,
+			);
 			productName = "HW21 - Marvel";
 			productReference = BE15A02D2913C260004AE5B5 /* HW21 - Marvel.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +318,9 @@
 				Base,
 			);
 			mainGroup = BE15A0242913C260004AE5B5;
+			packageReferences = (
+				BE15A05E2914F57C004AE5B5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BE15A02E2913C260004AE5B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE15A03D2913C26C004AE5B5 /* LaunchScreen.storyboard in Resources */,
 				BE15A03A2913C26C004AE5B5 /* Assets.xcassets in Resources */,
-				BE15A0382913C260004AE5B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +346,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE15A0352913C260004AE5B5 /* ViewController.swift in Sources */,
+				BE15A04F2914E8F6004AE5B5 /* CharactersPresenter.swift in Sources */,
+				BE15A0352913C260004AE5B5 /* CharactersViewController.swift in Sources */,
+				BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */,
 				BE15A0312913C260004AE5B5 /* AppDelegate.swift in Sources */,
+				BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */,
+				BEADBE6E291A6F4E004E6BFC /* Alert.swift in Sources */,
+				BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */,
+				BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */,
+				BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */,
+				BE15A06429164A0B004AE5B5 /* String + MD5.swift in Sources */,
+				BE15A0552914E9B0004AE5B5 /* CharactersTableViewCell.swift in Sources */,
+				BE15A0532914E988004AE5B5 /* CharactersModel.swift in Sources */,
+				BE15A06729179BF6004AE5B5 /* EnumForState.swift in Sources */,
+				BE15A0582914E9C9004AE5B5 /* CharactersView.swift in Sources */,
+				BE15A06F2917D41E004AE5B5 /* EnumForImage.swift in Sources */,
+				BE15A07A2917DB78004AE5B5 /* imageViewWithGradient.swift in Sources */,
+				BE15A0732917D731004AE5B5 /* DetailView.swift in Sources */,
 				BE15A0332913C260004AE5B5 /* SceneDelegate.swift in Sources */,
+				BE15A0772917D757004AE5B5 /* DetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BE15A0362913C260004AE5B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE15A0372913C260004AE5B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BE15A03B2913C26C004AE5B5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE15A03C2913C26C004AE5B5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BE15A03F2913C26C004AE5B5 /* Debug */ = {
@@ -291,10 +496,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 65ZD43WNWU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW21 - Marvel/Info.plist";
+				INFOPLIST_FILE = "HW21 - Marvel/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,10 +523,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 65ZD43WNWU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW21 - Marvel/Info.plist";
+				INFOPLIST_FILE = "HW21 - Marvel/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE15A05E2914F57C004AE5B5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE15A05F2914F57C004AE5B5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE15A05E2914F57C004AE5B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE15A0252913C260004AE5B5 /* Project object */;
 }
