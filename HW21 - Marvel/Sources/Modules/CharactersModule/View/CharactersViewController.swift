@@ -76,21 +76,22 @@ extension CharactersViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        var timer: Timer?
         let text = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         if text != "" {
-            timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
-                guard let self = self else { return }
-                self.presenter?.getCharacters(searchText: text)
-            })
+            self.presenter?.getCharacters(searchText: text)
+
         } else {
             presenter?.getCharacters(searchText: nil)
         }
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.getCharacters(searchText: nil)
+    }
 }
 
 extension CharactersViewController: CharactersViewProtocol {
+    
     func updateViewData(_ data: ViewData) {
         charactersView.viewData = data
     }
@@ -100,7 +101,14 @@ extension CharactersViewController: CharactersViewProtocol {
     }
     
     func failure(error: Error) {
-        print(error.localizedDescription)
+        alertOk(title: "Error", message: "This heroes not found. Try did it again") { [weak self] _ in
+            self?.charactersView.searchController.searchBar.text = ""
+            self?.presenter?.getCharacters(searchText: nil)
+        }
     }
+}
+
+enum Errror: Error {
+    case comeErr
 }
 

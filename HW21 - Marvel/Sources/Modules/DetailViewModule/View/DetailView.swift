@@ -57,6 +57,7 @@ class DetailView: UIView {
     private let backgroundImage: ImageViewWithGradient = {
         let image = ImageViewWithGradient(frame: .zero)
         image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
         return image
     }()
     

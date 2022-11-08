@@ -27,6 +27,7 @@
 		BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0742917D742004AE5B5 /* DetailViewController.swift */; };
 		BE15A0772917D757004AE5B5 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0762917D757004AE5B5 /* DetailPresenter.swift */; };
 		BE15A07A2917DB78004AE5B5 /* imageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */; };
+		BEADBE6E291A6F4E004E6BFC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADBE6D291A6F4E004E6BFC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BE15A0742917D742004AE5B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE15A0762917D757004AE5B5 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		BE15A0792917DB78004AE5B5 /* imageViewWithGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewWithGradient.swift; sourceTree = "<group>"; };
+		BEADBE6D291A6F4E004E6BFC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				BE15A0782917DB59004AE5B5 /* Style */,
 				BE15A06329164A0B004AE5B5 /* String + MD5.swift */,
+				BEADBE6D291A6F4E004E6BFC /* Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				BE15A06B2917D0CF004AE5B5 /* ApiKeys.swift in Sources */,
 				BE15A0312913C260004AE5B5 /* AppDelegate.swift in Sources */,
 				BE15A05C2914EB41004AE5B5 /* ModuleBuilder.swift in Sources */,
+				BEADBE6E291A6F4E004E6BFC /* Alert.swift in Sources */,
 				BE15A06D2917D175004AE5B5 /* URLConfiguration.swift in Sources */,
 				BE15A062291644CE004AE5B5 /* NetworkService.swift in Sources */,
 				BE15A0752917D742004AE5B5 /* DetailViewController.swift in Sources */,

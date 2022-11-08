@@ -39,9 +39,14 @@ class CharactersPresenter: CharactersPresenterProtocol {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let loadedData):
-                        self.characters = loadedData.data.results
-                        self.view?.updateViewData(.success)
-                        self.view?.success()
+                        if loadedData.data.results.count > 0 {
+                            self.characters = loadedData.data.results
+                            self.view?.updateViewData(.success)
+                            self.view?.success()
+                        } else {
+                            self.view?.failure(error: Errror.comeErr)
+                            self.view?.updateViewData(.failure)
+                        }
                     case .failure(let error):
                         self.view?.failure(error: error)
                         self.view?.updateViewData(.failure)
